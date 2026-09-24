@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Advanced R&D
 
-## Getting Started
+A practical demo project created to explore and implement advanced Next.js concepts using the App Router.
 
-First, run the development server:
+## 🧩 Main Dependencies
+
+| Package     | Version | Purpose                                              |
+| ----------- | ------- | ---------------------------------------------------- |
+| `next`      | 16.3.5  | React framework for building modern web applications |
+| `react`     | 19.2.8  | Library for building user interfaces                 |
+| `react-dom` | 19.2.8  | React package for DOM rendering                      |
+
+## 🛠 Dev Tools
+
+| Tool         | Version | Description              |
+| ------------ | ------- | ------------------------ |
+| `typescript` | ^5      | Type-safe JavaScript     |
+| `eslint`     | ^9      | Linting for code quality |
+| `prettier`   | ^3.9.8  | Code formatter           |
+
+## Prerequisites
+
+Make sure the following are installed on your system before running the project:
+
+- Node.js
+- npm
+
+## Environment
+
+- **Node**: 24.x
+- **npm**: 11.x
+
+#### Refer to the following documentation
+
+- Node.js: https://nodejs.org/en
+- Next.js: https://nextjs.org/
+- React: https://react.dev/
+- TypeScript: https://www.typescriptlang.org/docs/
+- Prettier: https://prettier.io/docs/
+- ESLint: https://eslint.org/docs/latest/use/getting-started
+
+## Cloning and Running the Application in local
+
+Clone the project into local
+
+Go into the project folder and install all npm packages:
+
+```bash
+cd "Folder_Name"
+```
+
+```bash
+npm install
+```
+
+In order to run the application Type the following command in a separate terminal
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The Application Runs on **localhost:3000** or your default port
