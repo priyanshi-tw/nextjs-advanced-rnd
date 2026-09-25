@@ -17,15 +17,5 @@ export const ThemeContext = createContext<ThemeContextType>({
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
 
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div
-        className={`min-h-screen ${
-          theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
-        }`}
-      >
-        {children}
-      </div>
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
 }

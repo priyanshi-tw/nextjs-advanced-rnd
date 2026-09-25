@@ -73,6 +73,17 @@ export const caching = [
   },
 ];
 
+export const errorboundary = [
+  {
+    title: 'Error Boundary',
+    href: '/error-boundary',
+  },
+  {
+    title: 'Custom Error Boundary',
+    href: '/custom-error-boundary',
+  },
+];
+
 export const products = [
   {
     id: '1',
@@ -115,4 +126,31 @@ export const images = [
   'https://images.unsplash.com/photo-1516117172878-fd2c41f4a759',
   'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
   'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+];
+
+export const conceptSections = [
+  {
+    title: 'Routing',
+    concepts: routingConcepts,
+  },
+  {
+    title: 'Server and Client Components',
+    concepts: serverClientConcepts,
+  },
+  {
+    title: 'Data Fetching',
+    concepts: dataFetchingConcepts,
+  },
+  {
+    title: 'Data Mutating',
+    concepts: dataMutatingConcepts,
+  },
+  {
+    title: 'Caching',
+    concepts: caching,
+  },
+  {
+    title: 'Error Boundary',
+    concepts: errorboundary,
+  },
 ];

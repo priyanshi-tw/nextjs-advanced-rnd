@@ -13,17 +13,20 @@ export default async function BlogPosts() {
   return (
     <>
       <div>
-        <h2 className="text-2xl font-semibold text-gray-900">Latest Posts</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Latest Posts</h2>
 
-        <p className="mt-1 text-sm text-gray-500">Cached blog content refreshed periodically.</p>
+        <p className="mt-1 text-sm text-slate-500">Cached blog content refreshed periodically.</p>
       </div>
 
       <div className="mt-6 space-y-4">
         {posts.map((post) => (
-          <article key={post.id} className="rounded-lg border p-5 transition hover:shadow-sm">
-            <h3 className="font-semibold text-gray-900">{post.title}</h3>
+          <article
+            key={post.id}
+            className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition "
+          >
+            <h3 className="font-semibold text-slate-900">{post.title}</h3>
 
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-slate-500">
               By {post.author} · {post.date}
             </p>
           </article>

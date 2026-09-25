@@ -1,13 +1,14 @@
 import { Metadata } from 'next';
-import ThemeSwitcher from './components/ThemeSwitcher';
+import ErrorTrigger from './components/ErrorTrigger';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+
 export const metadata: Metadata = {
-  title: 'Settings | Context Provider',
+  title: 'Error Boundary',
 };
-export default function SettingsPage() {
+export default function ErrorBoundaryPage() {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-8">
+    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
       <div className="flex items-center gap-3">
         <Link
           href="/"
@@ -18,13 +19,15 @@ export default function SettingsPage() {
         </Link>
 
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">Settings</h1>
+          <h1 className="text-2xl font-semibold text-slate-900">Error Boundary</h1>
 
-          <p className="mt-1 text-sm text-slate-500">Manage your application preferences.</p>
+          <p className="mt-1 text-sm text-slate-500">
+            This example demonstrates how Next.js handles unexpected errors using error.tsx.
+          </p>
         </div>
       </div>
 
-      <ThemeSwitcher />
+      <ErrorTrigger />
     </div>
   );
 }

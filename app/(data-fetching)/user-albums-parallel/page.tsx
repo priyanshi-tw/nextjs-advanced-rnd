@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import Albums from './components/Albums';
 import User from './components/User';
-
+import PageHeader from '@/app/components/PageHeader';
+export const metadata: Metadata = {
+  title: 'Users | Parallel Data Fetching',
+  description:
+    'A practical example demonstrating sequential data fetching in Next.js using dependent data requests.',
+};
 async function getUser() {
   const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
 
@@ -20,10 +26,11 @@ export default async function ParallelPage() {
 
   const albums = albumsResult.status === 'fulfilled' ? albumsResult.value : [];
   return (
-    <div className="max-w-2xl p-6">
-      <h1 className="text-2xl font-bold">Parallel Data Fetching</h1>
-
-      <p className="mt-2 text-gray-600">User and albums are fetched at the same time.</p>
+    <div>
+      <PageHeader
+        title="Parallel Data Fetching"
+        description="User and albums are fetched at the same time."
+      />
 
       <div className="mt-6 space-y-6">
         <User user={user} />

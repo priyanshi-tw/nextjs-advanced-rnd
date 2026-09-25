@@ -7,11 +7,11 @@ export default function ProductDetails() {
 
   return (
     <div>
-      <h2 className="text-xl font-bold">{product.name}</h2>
+      <h2 className="text-xl font-semibold text-slate-900">{product.name}</h2>
 
-      <p className="mt-2 text-gray-600">{product.description}</p>
+      <p className="mt-3 text-sm leading-6 text-slate-600">{product.description}</p>
 
-      <p className="mt-4 font-semibold">{product.price}</p>
+      <p className="mt-4 text-lg font-semibold text-slate-900">{product.price}</p>
     </div>
   );
 }

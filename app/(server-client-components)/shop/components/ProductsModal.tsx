@@ -1,5 +1,6 @@
 'use client';
 
+import { X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ProductModal({ children }: { children: React.ReactNode }) {
@@ -7,18 +8,30 @@ export default function ProductModal({ children }: { children: React.ReactNode }
 
   return (
     <>
-      <button onClick={() => setIsOpen(true)} className="rounded bg-black px-4 py-2 text-white">
+      <button
+        type="button"
+        onClick={() => setIsOpen(true)}
+        className="group inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-medium text-slate-700 transition-all hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
+      >
         View Product
+        <span className="transition-transform group-hover:translate-x-1">→</span>
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/50">
-          <div className="w-full max-w-md rounded-lg bg-white p-6">
-            {children}
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 p-4">
+          <div className="w-full max-w-md rounded-xl border border-slate-200 bg-white p-6 shadow-xl">
+            <div className="flex items-start justify-between gap-4">
+              <div>{children}</div>
 
-            <button onClick={() => setIsOpen(false)} className="mt-6 rounded bg-gray-200 px-4 py-2">
-              Close
-            </button>
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="rounded-lg p-2 text-slate-500 transition-colors hover:bg-blue-50 hover:text-blue-600"
+                aria-label="Close"
+              >
+                <X size={20} />
+              </button>
+            </div>
           </div>
         </div>
       )}

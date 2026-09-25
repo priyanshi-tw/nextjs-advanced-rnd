@@ -10,12 +10,15 @@ export default async function Albums({ userId }: { userId: number }) {
   await new Promise((resolve) => setTimeout(resolve, 500)); //  Added this to visually represent sequential data fetching properly
 
   return (
-    <div className="mt-6 rounded-lg border p-4">
-      <p className="text-sm text-gray-500">Albums for this user</p>
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <p className="text-sm text-slate-500">Albums for this user</p>
 
-      <ul className="mt-4 space-y-2">
+      <ul className="mt-4 space-y-4">
         {albums.map((album) => (
-          <li key={album.id} className="rounded border p-3">
+          <li
+            key={album.id}
+            className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-700"
+          >
             {album.title}
           </li>
         ))}

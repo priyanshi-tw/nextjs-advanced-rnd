@@ -1,8 +1,9 @@
+import PageHeader from '@/app/components/PageHeader';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dashboard | Parallel Routing',
+};
 export default function DashboardPage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Dashboard</h1>
-      <p>Welcome to the dashboard.</p>
-    </div>
-  );
+  return <PageHeader title="Dashboard" description="Welcome to the dashboard." />;
 }

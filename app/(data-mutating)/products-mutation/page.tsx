@@ -1,18 +1,23 @@
+import { Metadata } from 'next';
 import AddProductForm from './components/AddProductForm';
 import ProductList from './components/ProductsList';
+import PageHeader from '@/app/components/PageHeader';
 
+export const metadata: Metadata = {
+  title: 'Product | Data Mutating and Revalidating',
+};
 export default function ProductsMutationPage() {
   return (
-    <main className="max-w-2xl p-6">
-      <h1 className="text-2xl font-bold">Product Mutation</h1>
+    <div className="space-y-4">
+      <PageHeader
+        title="Product Mutation"
+        description="Add a product using a Next.js Server Action."
+      />
 
-      <p className="mt-2 text-gray-600">Add a product using a Next.js Server Action.</p>
-
-      <div className="mt-6">
-        <AddProductForm />
+      <AddProductForm />
+      <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <ProductList />
       </div>
-
-      <ProductList />
-    </main>
+    </div>
   );
 }
